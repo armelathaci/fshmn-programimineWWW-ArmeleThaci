@@ -1,7 +1,7 @@
 # Java I - Pasaporta Digjitale
 
 Ky projekt permban dy faqe te thjeshta HTML te lidhura mes vete.
-Personazhi i zgjedhur eshte Rita Ora.
+Personazhi i zgjedhur eshte Rita.
 
 ## Permbajtja
 
