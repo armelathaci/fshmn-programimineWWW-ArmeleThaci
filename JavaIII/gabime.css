@@ -1,0 +1,19 @@
+/*
+  Diagnostika:
+  - #poster kishte specifikë më të lartë se .poster dhe e bënte tekstin të bardhë
+    mbi sfond të bardhë.
+  - width: 700px plus padding krijonte overflow në ekrane të vogla.
+  Zgjidhja përdor ngjyra të lexueshme dhe box-sizing: border-box.
+*/
+#poster {
+  color: #17263c;
+  background: #ffffff;
+  width: min(100%, 672px);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.poster {
+  color: #17263c;
+  width: 100%;
+}

@@ -1,0 +1,160 @@
+:root {
+  --background: #f2f6fc;
+  --surface: #ffffff;
+  --ink: #17263c;
+  --muted: #52657d;
+  --accent: #08786f;
+  --accent-dark: #075b55;
+  --border: #c8d5e5;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 0;
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.skip {
+  position: absolute;
+  top: var(--space-1);
+  left: -9999px;
+  padding: var(--space-1) var(--space-2);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.skip:focus {
+  left: var(--space-2);
+  z-index: 1;
+}
+
+.site-header,
+main,
+footer {
+  width: min(100% - 2rem, 1080px);
+  margin-inline: auto;
+}
+
+.site-header {
+  padding-block: var(--space-2) var(--space-4);
+  border-bottom: 3px solid var(--accent);
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-3);
+  color: var(--muted);
+}
+
+h1,
+h2 {
+  line-height: 1.15;
+}
+
+h1 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+main {
+  padding-block: var(--space-4);
+}
+
+.poster {
+  width: min(100%, 672px);
+  margin-inline: auto;
+  padding: clamp(1.25rem, 5vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 8px 20px rgb(23 38 60 / 8%);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.tag {
+  padding: 0.35rem 0.75rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  font-size: 0.95rem;
+}
+
+.tag--limited {
+  border-style: dashed;
+}
+
+.tag--online {
+  font-weight: 700;
+}
+
+h2 {
+  margin: 0 0 var(--space-3);
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+}
+
+.event-details {
+  color: var(--muted);
+}
+
+.button {
+  display: inline-block;
+  margin-top: var(--space-1);
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.button:hover {
+  background: var(--accent-dark);
+}
+
+:where(a):focus-visible {
+  outline: 3px solid #e48b16;
+  outline-offset: 4px;
+}
+
+.registration {
+  width: min(100%, 672px);
+  margin: var(--space-3) auto 0;
+  color: var(--muted);
+}
+
+footer {
+  padding-block: 0 var(--space-4);
+  color: var(--muted);
+}
+
+@media (max-width: 360px) {
+  .site-header,
+  main,
+  footer {
+    width: min(100% - 1rem, 1080px);
+  }
+
+  .poster {
+    padding: var(--space-2);
+  }
+}
